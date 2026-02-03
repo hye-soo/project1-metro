@@ -616,6 +616,238 @@ the first .nav-item */
 /* =============================== */
 /* 2.10 Footer */
 /* =============================== */
+/* footer-intro */
+.site-footer {
+  background-color: #0E2E4E;
+  color:white;
+  
+  /* padding: 0 10rem; */
+}
+
+.site-footer__inner {
+  margin: 0 10rem;
+  
+}
+
+.site-footer__profile {
+  display:flex;
+  align-items: center;
+  padding: 2rem 2rem 0 2rem;
+  max-width:760px;
+  gap:2rem;
+}
+
+.footer-profile {
+  border-radius: 50%;
+}
+
+.footer-divider {
+  border: none;
+  background-color: #ffb901;
+  height: 3px;
+  width: 125px;
+  margin-top:0.5rem;
+  margin-left:11.375rem;
+}
+
+
+/* footer grid */
+.footer-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.5fr 1fr;
+  gap: 2rem;
+  padding: 1.25rem 0; 
+}
+
+
+.footer-column-title::after {
+    content: '';
+    display: block;
+    width: 230px; /* Adjust width as needed */
+    height: 2px; /* Adjust thickness */
+    margin-top: 0.625rem;; /* Space between title and line */
+    margin-bottom: 1.125rem;
+}
+
+.title-about {
+  color: #ffb901;
+}
+.title-about::after {
+  background-color: #21c183; /* Choose your color */
+}
+
+.title-instagram {
+  color: #de6262;
+}
+.title-instagram::after {
+  background-color: #19b2de
+}
+
+.title-mastodon {
+  color: #19b2de;
+}
+.title-mastodon::after {
+  background-color: #ffb901
+}
+
+.title-track::after {
+  background-color: #19b2de;
+}
+
+
+.footer-column-text,.mastodon-content {
+  margin-bottom:1.5rem;
+}
+
+
+/* insta */
+.instagram-list {
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:0.8rem;
+}
+
+li {
+  list-style:none;
+}
+
+
+/* What's New */
+.mastodon-handle {
+  color: #1BADE6;
+}
+
+/* Track Us */
+.social-list {
+  display:grid;
+  grid-template-columns: repeat(4,1fr);
+  
+
+}
+
+/* hide 'Email Address */
+.visually-hidden {
+  display: none;
+}
+
+.newsletter-form {
+  margin-top: 1.25rem;
+}
+
+input[type="email"]{
+  background-color: #de6262;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+button[type="submit"]{
+  background-color: #f5b400;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+
+
+
+
+/* ================== */
+/* ===== Responsive ====== */
+/* ================== */
+
+@media screen and (max-width: 992px) {
+  
+   .site-footer__inner {
+    margin: 0 2rem;
+  }
+
+  .footer-columns {
+    grid-template-columns: repeat(6,1fr);
+    grid-template-areas: 
+      "about about about instagram instagram instgram"
+      "mastodon mastodon mastodon mastodon track track";
+  }
+
+  .footer-about {
+    grid-area: about;
+  }
+  .footer-instagram {
+    grid-area: instagram;
+  }
+  .footer-mastodon {
+    grid-area: mastodon;
+  }
+  .footer-track-us {
+    grid-area: track;
+  }
+
+
+  .instagram-list {
+    grid-template-columns: repeat(4, 1fr);
+    
+}
+  
+  .footer-columns {
+  padding: 2.75rem 0; 
+  }
+
+  .social-list {
+  display: flex;
+  gap: 6px;
+}
+
+}
+
+@media screen and (max-width: 768px) {
+ 
+
+
+
+}
+@media screen and (max-width: 992px) and (min-width: 768px) {
+
+ 
+
+}
+
+/* Small only: max-width ~ 639px (mobile) */
+@media screen and (max-width: 39.9375em) {
+  
+  .site-footer__inner {
+    margin: 0 0.25rem;
+  }
+  .footer-about {
+    display: none;
+  }
+  .footer-instagram {
+    display: none;
+  }
+
+  .footer-divider {
+    margin-left: 10rem;
+    margin-top: 1rem;
+  }
+
+  
+
+  .site-footer__profile {
+    align-items: flex-start;
+    
+  }
+ 
+   /* .footer-columns {
+  padding: 2.75rem 0; 
+  } */
+
+  .footer-columns {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    margin: 1.25rem;
+  }
+}
 
 /* =============================== */
 /* 3. RESPONSIVE */
