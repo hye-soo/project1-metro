@@ -394,8 +394,6 @@ the first .nav-item */
 
   background-color: var(--blue);
   color: white;
-
-  /* position: relative; IMPORTANT */ /*Feb 4th Hye*/
 }
 
 .blog-text-group::after {
