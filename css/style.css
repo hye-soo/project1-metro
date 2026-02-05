@@ -639,7 +639,7 @@ the first .nav-item */
 }
 
 .footer-profile {
-  border-radius: 50%;
+  width: 500px;
 }
 
 .footer-divider {
@@ -722,9 +722,9 @@ li {
 .social-list {
   display:grid;
   grid-template-columns: repeat(4,1fr);
-  
-
+  gap: 1.25rem;
 }
+
 
 /* hide 'Email Address */
 .visually-hidden {
@@ -749,6 +749,8 @@ button[type="submit"]{
   border: none;
   border-radius: 5px;
 }
+
+
 
 
 
@@ -848,6 +850,11 @@ button[type="submit"]{
     align-items: flex-end;
     margin: 1.25rem;
   }
+
+  .footer-color-bar {
+  width: 100%;
+  margin: auto
+}
 }
 
 /* =============================== */
