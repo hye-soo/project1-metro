@@ -673,7 +673,7 @@ the first .nav-item */
 .footer-column-title::after {
   content: "";
   display: block;
-  width: 230px; /* Adjust width as needed */
+  width: 230px; /* Adjust width as */
   height: 2px; /* Adjust thickness */
   margin-top: 0.625rem; /* Space between title and line */
   margin-bottom: 1.125rem;
@@ -755,86 +755,7 @@ button[type="submit"] {
   border-radius: 5px;
 }
 
-/* ================== */
-/* ===== Responsive ====== */
-/* ================== */
 
-@media screen and (max-width: 992px) {
-  .site-footer__inner {
-    margin: 0 2rem;
-  }
-
-  .footer-columns {
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-areas:
-      "about about about instagram instagram instgram"
-      "mastodon mastodon mastodon mastodon track track";
-  }
-
-  .footer-about {
-    grid-area: about;
-  }
-  .footer-instagram {
-    grid-area: instagram;
-  }
-  .footer-mastodon {
-    grid-area: mastodon;
-  }
-  .footer-track-us {
-    grid-area: track;
-  }
-
-  .instagram-list {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .footer-columns {
-    padding: 2.75rem 0;
-  }
-
-  .social-list {
-    display: flex;
-    gap: 6px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-}
-@media screen and (max-width: 992px) and (min-width: 768px) {
-}
-
-/* Small only: max-width ~ 639px (mobile) */
-@media screen and (max-width: 39.9375em) {
-  .site-footer__inner {
-    margin: 0 0.25rem;
-  }
-  .footer-about {
-    display: none;
-  }
-  .footer-instagram {
-    display: none;
-  }
-
-  .footer-divider {
-    margin-left: 10rem;
-    margin-top: 1rem;
-  }
-
-  .site-footer__profile {
-    align-items: flex-start;
-  }
-
-  /* .footer-columns {
-  padding: 2.75rem 0; 
-  } */
-
-  .footer-columns {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: flex-end;
-    margin: 1.25rem;
-  }
-}
 
 /* =============================== */
 /* 3. RESPONSIVE */
@@ -985,6 +906,37 @@ button[type="submit"] {
   .section--logos {
     display: none;
   }
+
+
+  .site-footer__inner {
+    margin: 0 0.25rem;
+  }
+  .footer-about {
+    display: none;
+  }
+  .footer-instagram {
+    display: none;
+  }
+
+  .footer-divider {
+    margin-left: 10rem;
+    margin-top: 1rem;
+  }
+
+  .site-footer__profile {
+    align-items: flex-start;
+  }
+
+  /* .footer-columns {
+  padding: 2.75rem 0; 
+  } */
+
+  .footer-columns {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    margin: 1.25rem;
+  }
 }
 
 /* =============================== */
@@ -1101,6 +1053,44 @@ button[type="submit"] {
     width: 100%;
     max-width: 150px;
   }
+
+  .site-footer__inner {
+    margin: 0 2rem;
+  }
+
+  .footer-columns {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas:
+      "about about about instagram instagram instgram"
+      "mastodon mastodon mastodon mastodon track track";
+  }
+
+  .footer-about {
+    grid-area: about;
+  }
+  .footer-instagram {
+    grid-area: instagram;
+  }
+  .footer-mastodon {
+    grid-area: mastodon;
+  }
+  .footer-track-us {
+    grid-area: track;
+  }
+
+  .instagram-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .footer-columns {
+    padding: 2.75rem 0;
+  }
+
+  .social-list {
+    display: flex;
+    gap: 6px;
+  }
+
 }
 /* =============================== */
 /* 3.3 Desktop */
