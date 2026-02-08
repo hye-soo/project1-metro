@@ -639,6 +639,7 @@ the first .nav-item */
 
 .site-footer__inner {
   margin: 0 10rem;
+  position: relative;
 }
 
 .site-footer__profile {
@@ -667,7 +668,7 @@ the first .nav-item */
   display: grid;
   grid-template-columns: 1fr 1fr 1.5fr 1fr;
   gap: 2rem;
-  padding: 1.25rem 0;
+  padding: 3rem 0;
 }
 
 .footer-column-title::after {
@@ -738,6 +739,8 @@ li {
 
 .newsletter-form {
   margin-top: 1.25rem;
+  display: flex;  /* keep input and button in the same line */
+  flex-wrap: nowrap;
 }
 
 input[type="email"] {
@@ -746,6 +749,8 @@ input[type="email"] {
   padding: 10px;
   border: none;
   border-radius: 5px;
+  flex: 1;             /* input takes remaining space */
+  min-width: 0; 
 }
 
 button[type="submit"] {
@@ -756,6 +761,26 @@ button[type="submit"] {
 }
 
 
+/* ================
+Testing
+================ */
+
+.site-footer__inner::after {
+  
+ 
+  
+  content: "";
+  display: block;
+
+  width: 60%;
+  height: 60px; /* adjust to your PNG */
+
+  background-image: url("../img/BG_ColourBar.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+  
+}
 
 /* =============================== */
 /* 3. RESPONSIVE */
@@ -927,9 +952,7 @@ button[type="submit"] {
     align-items: flex-start;
   }
 
-  /* .footer-columns {
-  padding: 2.75rem 0; 
-  } */
+  
 
   .footer-columns {
     display: flex;
@@ -937,6 +960,13 @@ button[type="submit"] {
     align-items: flex-end;
     margin: 1.25rem;
   }
+
+  .social-list {
+    display: flex;
+    gap: 6px;
+  }
+
+ 
 }
 
 /* =============================== */
